@@ -20,12 +20,15 @@ const UserSchema = new mongoose.Schema({
     type: String,
     enum: ["male", "female", "other"],
   },
-  qualification: String,
-  github: String,
-  linkedin: String,
   passwordHash: {
     type: String,
     required: true,
+  },
+  email_otp: {
+    type: String,
+  },
+  is_verified: {
+    type: Boolean,
   },
   subscription: {
     exists: {

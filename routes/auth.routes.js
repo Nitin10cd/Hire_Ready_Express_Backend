@@ -1,12 +1,11 @@
 import express from "express";
 import { session } from "passport";
+import { _Register, registerValidationRules } from "../controllers/auth.controllers.js";
 
 const authRoute = express.Router();
 // routes
 
-authRoute.post("/register", function (req,res) {
-    
-});
+authRoute.post("/register", registerValidationRules , _Register);
 
 authRoute.post("/login", function (req,res) {
 
@@ -47,8 +46,6 @@ authRoute.post('/password-reset-email', function (request , response) {
 
 });
 
-authRoute.post('/password-reset-phone', function (req , res)) {
-    
-}
+authRoute.post('/password-reset-phone', function (req , res){})
 
 export default authRoute;
