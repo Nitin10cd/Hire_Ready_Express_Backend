@@ -1,8 +1,9 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import dbConnect from "./config/dbConnect";
-import authRoute from "./routes/auth.routes";
+import dbConnect from "./config/dbConnect.js";
+import authRoute from "./routes/auth.routes.js";
+import session from "express-session";
 
 
 dotenv.config();
@@ -31,4 +32,4 @@ app.use(express.urlencoded({limit: '100md', extended: true}));
 app.use("/api/auth", authRoute);
 
 //  main app runner 
-app.listen("");
+app.listen(3000, () => console.log("Server running on port 3000"));

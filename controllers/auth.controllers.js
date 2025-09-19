@@ -15,7 +15,7 @@ export const registerValidationRules = [
     body("password").isLength({ min: 8 }).withMessage("Password must be at least 8 characters"),
 ];
 
-// CONTROLLER FOR THE REGISTER A user
+// CONTROLLER FOR THE REGISTER A USER
 export async function _Register(req, res) {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {

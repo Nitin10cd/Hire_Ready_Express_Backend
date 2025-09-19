@@ -1,5 +1,4 @@
 import express from "express";
-import { session } from "passport";
 import { _Register, registerValidationRules } from "../controllers/auth.controllers.js";
 
 const authRoute = express.Router();
